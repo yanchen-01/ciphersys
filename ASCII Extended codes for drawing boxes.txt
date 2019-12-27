@@ -1,0 +1,15 @@
+
+Ref: https://en.wikipedia.org/wiki/Box-drawing_character
+Extended ASCII Codes for Box Drawing
+
+┌ ┐ ┘ └ ┤ ┼ ├ ┴ ┬ │ ─
+
+╓ ╖ ╜ ╙ ╢ ╫ ╟ ╨ ╥ 
+
+╔ ╗ ╝ ╚ ╣ ╬ ╠ ╩ ╦ ║ ═  
+
+╒ ╕ ╛ ╘ ╡ ╪ ╞ ╧ ╤ 
+
+
+Block Elements (Some of them did not show up!)
+▀	▄	█	 ▌ ▐	░	▒	▓	
