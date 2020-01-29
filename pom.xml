@@ -5,8 +5,8 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.yazdankhah</groupId>
-  <artifactId>security</artifactId>
+  <groupId>edu.sjsu.crypto</groupId>
+  <artifactId>ciphersys</artifactId>
   <version>1.0.00</version>
   <packaging>jar</packaging>
 
@@ -15,15 +15,10 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <log4j.version>2.11.0</log4j.version>
-    <lombok-version>1.18.6</lombok-version>
+    <lombok-version>1.18.10</lombok-version>
   </properties>
 
   <dependencies>
-    <dependency>
-      <groupId>edu.sjsu.security</groupId>
-      <artifactId>cryptoUtil</artifactId>
-      <version>1.0.00</version>
-    </dependency>
 
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
@@ -64,8 +59,6 @@
     </dependency>
 
   </dependencies>
-  
-  
 </project>
 
 
