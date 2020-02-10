@@ -6,32 +6,44 @@ import edu.sjsu.yazdankhah.crypto.util.primitivedatatypes.Word;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * This is a Hello Word class for Cipher Systems project. 
- *  
+ * This is a Hello Word class for Cipher Systems project.
+ *
  * @author ahmad
  */
 @Slf4j
 public class HelloWorld {
-  
-  public static void greeting() {
+
+	/**
+	 * Greeting.
+	 */
+	public static void greeting() {
     log.info("Hello World!");
   }
-  
-  public static void usingCryptoUtil1() {
+
+	/**
+	 * Using crypto util 1.
+	 */
+	public static void usingCryptoUtil1() {
 	  String text = "attack";
 	  String binStr = ConversionUtil.textToBinStr(text);
 	  
 	  PrintUtil.printStrFormatted(binStr, "Binary string 1");
   }
-  
-  public static void usingCryptoUtil2() {
+
+	/**
+	 * Using crypto util 2.
+	 */
+	public static void usingCryptoUtil2() {
 	  String text = "attack";
 	  String binStr = ConversionUtil.textToBinStr(text);
 	  
 	  PrintUtil.putStrInBox(binStr, "This is the binary string in box!");
   }
-  
-  public static void usingUtil3(){
+
+	/**
+	 * Using util 3.
+	 */
+	public static void usingUtil3(){
 	  Word wo = Word.constructFromHexStr("BCA017");
 	  wo.printBinStr();
 	  }
