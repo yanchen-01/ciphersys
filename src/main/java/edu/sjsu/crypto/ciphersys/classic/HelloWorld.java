@@ -2,6 +2,7 @@ package edu.sjsu.crypto.ciphersys.classic;
 
 import edu.sjsu.yazdankhah.crypto.util.cipherutils.ConversionUtil;
 import edu.sjsu.yazdankhah.crypto.util.cipherutils.PrintUtil;
+import edu.sjsu.yazdankhah.crypto.util.primitivedatatypes.Word;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -30,4 +31,8 @@ public class HelloWorld {
 	  PrintUtil.putStrInBox(binStr, "This is the binary string in box!");
   }
   
+  public static void usingUtil3(){
+	  Word wo = Word.constructFromHexStr("BCA017");
+	  wo.printBinStr();
+	  }
 }

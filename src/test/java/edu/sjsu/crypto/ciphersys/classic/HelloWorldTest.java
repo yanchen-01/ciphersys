@@ -19,5 +19,10 @@ class HelloWorldTest {
 	void testUsingCryptoUtil2() {
 		HelloWorld.usingCryptoUtil2();
 	}
+	
+	@Test
+	void testUsingUtil3() {
+		HelloWorld.usingUtil3();
+	}
 
 }

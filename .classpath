@@ -30,6 +30,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
-	<classpathentry kind="lib" path="C:/Users/jwxzz/Desktop/CS265_A/cryptoUtil/cryptoUtil-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jwxzz/Desktop/CS265_A/Assignments/HW2/cryptoUtil-1.21.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
