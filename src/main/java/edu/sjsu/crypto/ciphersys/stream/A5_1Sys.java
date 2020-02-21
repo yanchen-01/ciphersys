@@ -12,8 +12,9 @@ import edu.sjsu.yazdankhah.crypto.util.shiftregisters.LFSR;
  * customer: Sida Zhong
  */
 public class A5_1Sys extends A5_1Abs {
-    /* registers for key generation*/
+
     private LFSR X, Y, Z;
+    private String pass;
 
     /**
      * Instantiates a new A5/1 cipher system.
@@ -21,18 +22,13 @@ public class A5_1Sys extends A5_1Abs {
      * @param pass the string used to generate keystream
      */
     public A5_1Sys(String pass) {
-        pass = ConversionUtil.textToBinStr(pass);
-        pass = StringUtil.rightTruncRightPadWithZeros(pass,64);
-
-        int y = X_REG_SIZE_BITS + Y_REG_SIZE_BITS;
-
-        X = LFSR.constructFromBinStr(pass.substring(0, X_REG_SIZE_BITS), X_TAPS);
-        Y = LFSR.constructFromBinStr(pass.substring(X_REG_SIZE_BITS, y), Y_TAPS);
-        Z = LFSR.constructFromBinStr(pass.substring(y, 64), Z_TAPS);
+        this.pass = ConversionUtil.textToBinStr(pass);
+        initialize();
     }
 
     /**
      * Generate one bit of keystream
+     *
      * @return bit of keystream
      */
     @Override
@@ -52,11 +48,13 @@ public class A5_1Sys extends A5_1Abs {
 
     /**
      * Encrypt a plaintext.
-     * @param plaintext
+     *
+     * @param plaintext the plaintext
      * @return ciphertext in hex string
      */
     @Override
     public String encrypt(String plaintext) {
+        initialize();
         Bit[] ciphertext = ConversionUtil.textToBitArr(plaintext);
 
         for (int i = 0; i < ciphertext.length; i++) {
@@ -68,11 +66,13 @@ public class A5_1Sys extends A5_1Abs {
 
     /**
      * Decrypted a ciphertext (in hex string)
+     *
      * @param cipherHexStr the cipher hex string
      * @return plaintext
      */
     @Override
     public String decrypt(String cipherHexStr) {
+        initialize();
         cipherHexStr = ConversionUtil.hexStrToText(cipherHexStr);
         Bit[] plaintext = ConversionUtil.textToBitArr(cipherHexStr);
 
@@ -81,6 +81,18 @@ public class A5_1Sys extends A5_1Abs {
         }
 
         return ConversionUtil.bitArrToText(plaintext);
+    }
+
+    /**
+     * Private helper method to initialize the registers for generating the key
+     */
+    private void initialize(){
+        pass = StringUtil.rightTruncRightPadWithZeros(pass, 64);
+        int y = X_REG_SIZE_BITS + Y_REG_SIZE_BITS;
+
+        X = LFSR.constructFromBinStr(pass.substring(0, X_REG_SIZE_BITS), X_TAPS);
+        Y = LFSR.constructFromBinStr(pass.substring(X_REG_SIZE_BITS, y), Y_TAPS);
+        Z = LFSR.constructFromBinStr(pass.substring(y, 64), Z_TAPS);
     }
 
 }

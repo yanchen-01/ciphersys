@@ -9,10 +9,14 @@ class A5_1SysTest {
 
     @Test
     void encrypt() {
-        String plaintext = "SJSU doesn't care about US president!";
-        String pass = "NoDayOff";
+        String plaintext = "defend the east wall!";
+        String pass = "GoToHell#007";
         A5_1Sys sys = new A5_1Sys (pass);
         log.info("ciphertext = [" + sys.encrypt(plaintext)+ "]");
+        log.info("ciphertext = [" + sys.encrypt(plaintext)+ "]");
+        log.info("Recovered Plaintext = [" + sys.decrypt(sys.encrypt(plaintext))+ "]");
+        log.info("ciphertext = [" + sys.encrypt(plaintext)+ "]");
+        log.info("Recovered Plaintext = [" + sys.decrypt(sys.encrypt(plaintext))+ "]");
     }
 
     @Test
