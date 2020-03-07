@@ -9,8 +9,8 @@ class PkzipSysTest {
 
     @Test
     void encrypt() {
-        String plaintext = "defend the east wall!";
-        String pass = "GoToHell#007";
+        String plaintext = "2019-nCoV";
+        String pass = "CDC";
         PkzipSys sys = new PkzipSys (pass);
         log.info("ciphertext = [" + sys.encrypt(plaintext)+ "]");
         log.info("ciphertext = [" + sys.encrypt(plaintext)+ "]");
@@ -18,8 +18,8 @@ class PkzipSysTest {
 
     @Test
     void decrypt() {
-        String ciphertext = "1f63ddbf86138a442cd1d6ba4a91a8596bca1090a2";
-        String pass = "GoToHell#007";
+        String pass = "sida";
+        String ciphertext = "53d730e57479c33bb121502971868a205aa3bcfd34";
         PkzipSys sysR = new PkzipSys (pass);
         log.info("Recovered Plaintext = [" + sysR.decrypt(ciphertext)+ "]");
         log.info("Recovered Plaintext = [" + sysR.decrypt(ciphertext)+ "]");
