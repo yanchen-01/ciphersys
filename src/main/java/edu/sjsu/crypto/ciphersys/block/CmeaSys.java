@@ -3,7 +3,11 @@ package edu.sjsu.crypto.ciphersys.block;
 import edu.sjsu.yazdankhah.crypto.util.abstracts.CmeaAbs;
 import edu.sjsu.yazdankhah.crypto.util.cipherutils.*;
 import edu.sjsu.yazdankhah.crypto.util.primitivedatatypes.*;
-
+/**
+ * CEMA cipher system
+ * @author Yan Chen
+ * Customer: Sida Zhong
+ */
 public class CmeaSys extends CmeaAbs {
 
     UByte[] k;
