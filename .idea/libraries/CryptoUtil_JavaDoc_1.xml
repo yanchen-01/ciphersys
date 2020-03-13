@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="CryptoUtil-JavaDoc-1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Desktop/CS265_A/Assignments/HW6/cryptoUtil-1.6.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/Desktop/CS265_A/Assignments/HW6/CryptoUtil-JavaDoc-1.6.zip!/CryptoUtil-JavaDoc-1.6" />
+      <root url="jar://$USER_HOME$/Desktop/CS265_A/Assignments/HW6/cryptoUtil-1.6.jar!/doc" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>
