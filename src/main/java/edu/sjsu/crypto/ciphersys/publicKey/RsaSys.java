@@ -31,7 +31,7 @@ public class RsaSys extends RsaAbs {
      * Encrypt the plaintext to cipher in hex using the public key.
      *
      * @param plaintext the plaintext
-     * @param publicKey the public key
+     * @param publicKey the RSA public key
      * @return cipher in hex string
      */
     @Override
@@ -48,7 +48,7 @@ public class RsaSys extends RsaAbs {
      * Decrypt the cipher in hex to plaintext using the private key.
      *
      * @param ciphertext the cipher hex string
-     * @param privateKey the private key
+     * @param privateKey the RSA private key
      * @return plaintext
      */
     @Override
