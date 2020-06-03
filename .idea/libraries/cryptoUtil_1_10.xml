@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="cryptoUtil-1.10">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Desktop/CS265_A/Assignments/HW10Final/cryptoUtil-1.10.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/Desktop/CS265_A/Assignments/HW10Final/cryptoUtil-JavaDoc-1.10.zip!/cryptoUtil-JavaDoc-1.10" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>
